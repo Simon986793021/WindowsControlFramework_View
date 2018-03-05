@@ -86,10 +86,15 @@ public class CustomeView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        Log.i(TAG,"measuredHeight"+getMeasuredHeight()+"measuredWidth:"+getMeasuredWidth());
+        Log.i(TAG,"Height"+getHeight()+"Width:"+getWidth());
         Log.i(TAG, "onDraw");
         Paint paint = new Paint();
         paint.setColor(Color.RED);
         canvas.drawCircle(100, 100, 50, paint);
+        Log.i(TAG,"measuredHeight"+getMeasuredHeight()+"measuredWidth:"+getMeasuredWidth());
+        Log.i(TAG,"Height"+getHeight()+"Width:"+getWidth());
     }
 
     /**
@@ -143,7 +148,7 @@ public class CustomeView extends View {
     @Override
     protected void onVisibilityChanged(@NonNull View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
-        Log.i(TAG, "onVisibilityChanged");
+        Log.i(TAG, "onVisibilityChanged"+visibility );
     }
 
     /**
@@ -154,6 +159,6 @@ public class CustomeView extends View {
     @Override
     protected void onWindowVisibilityChanged(int visibility) {
         super.onWindowVisibilityChanged(visibility);
-        Log.i(TAG, "onWindowVisibilityChanged");
+        Log.i(TAG, "onWindowVisibilityChanged"+visibility);
     }
 }
